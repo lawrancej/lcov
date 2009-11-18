@@ -241,7 +241,7 @@ $SIG{__WARN__} = \&warn_handler;
 $SIG{__DIE__} = \&die_handler;
 
 # Prettify version string
-$lcov_version =~ s/\$Revision$/$1/;
+$lcov_version =~ s/\$\s*Revision\s*:?\s*(\S+)\s*\$/$1/;
 
 # Add current working directory if $tool_dir is not already an absolute path
 if (! ($tool_dir =~ /^\/(.*)$/))
