@@ -4558,7 +4558,7 @@ sub apply_baseline($$)
 			($sumcount, $found, $hit) =
 				add_counts($sumcount, $data_count);
 			($sumfnccount, $fn_found, $fn_hit) =
-				add_fnccounts($sumfnccount, $data_testfnccount);
+				add_fnccount($sumfnccount, $data_testfnccount);
 		}
 
 		# Write back resulting entry
