@@ -4438,14 +4438,16 @@ sub subtract_counts($$)
 
 sub subtract_fnccounts($$)
 {
-	my %data = %{$_[0]};
-	my %base = %{$_[1]};
+	my %data;
+	my %base;
 	my $func;
 	my $data_count;
 	my $base_count;
 	my $fn_hit = 0;
 	my $fn_found = 0;
 
+	%data = %{$_[0]} if (defined($_[0]));
+	%base = %{$_[1]} if (defined($_[1]));
 	foreach $func (keys(%data)) {
 		$fn_found++;
 		$data_count = $data{$func};
