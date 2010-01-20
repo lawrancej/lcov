@@ -205,15 +205,15 @@ if ($config)
 }
 
 # Parse command line options
-if (!GetOptions("test-name=s" => \$test_name,
-		"output-filename=s" => \$output_filename,
+if (!GetOptions("test-name|t=s" => \$test_name,
+		"output-filename|o=s" => \$output_filename,
 		"checksum" => \$checksum,
 		"no-checksum" => \$no_checksum,
-		"base-directory=s" => \$base_directory,
-		"version" =>\$version,
-		"quiet" => \$quiet,
-		"help|?" => \$help,
-		"follow" => \$follow,
+		"base-directory|b=s" => \$base_directory,
+		"version|v" =>\$version,
+		"quiet|q" => \$quiet,
+		"help|h|?" => \$help,
+		"follow|f" => \$follow,
 		"compat-libtool" => \$compat_libtool,
 		"no-compat-libtool" => \$no_compat_libtool,
 		"gcov-tool=s" => \$gcov_tool,
