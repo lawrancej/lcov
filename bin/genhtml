@@ -3790,7 +3790,7 @@ sub get_branch_html($)
 			if ($taken eq '-') {
 				$class	= "branchNoExec";
 				$text	= " # ";
-				$title	= "Basic block containing branch ".
+				$title	= "Block containing branch ".
 					  "$br_num was never ".
 					  "executed";
 			} elsif ($taken == 0) {
