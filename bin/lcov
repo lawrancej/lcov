@@ -945,6 +945,10 @@ sub create_package($$$;$)
 	system("tar cfz $file .")
 		and die("ERROR: could not create package $file\n");
 
+	# Remove temporary files
+	unlink("$dir/$pkg_build_file");
+	unlink("$dir/$pkg_gkv_file");
+
 	# Show number of data files
 	if (!$quiet) {
 		my $count = count_package_data($file);
