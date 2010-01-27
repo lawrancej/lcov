@@ -172,7 +172,7 @@ sub gen_desc()
 	{
 		chomp($_);
 
-		if (/^\s*(\w[\w-]*)(\s*)$/)
+		if (/^(\w[\w-]*)(\s*)$/)
 		{
 			# Matched test name
 			# Name starts with alphanum or _, continues with
