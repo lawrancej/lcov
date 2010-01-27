@@ -1295,7 +1295,7 @@ sub read_info_file($)
 		# Switch statement
 		foreach ($line)
 		{
-			/^TN:([^,]*)/ && do
+			/^TN:([^,]*)(,diff)?/ && do
 			{
 				# Test name information found
 				$testname = defined($1) ? $1 : "";
@@ -1303,6 +1303,7 @@ sub read_info_file($)
 				{
 					$changed_testname = 1;
 				}
+				$testname .= $2 if (defined($2));
 				last;
 			};
 
