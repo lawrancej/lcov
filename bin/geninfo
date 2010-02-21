@@ -2927,7 +2927,7 @@ sub debug($)
 	my ($msg) = @_;
 
 	return if (!$debug);
-	print("DEBUG: $msg");
+	print(STDERR "DEBUG: $msg");
 }
 
 #
