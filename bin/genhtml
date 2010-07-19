@@ -3799,9 +3799,7 @@ sub get_branch_html($)
 			if ($taken eq '-') {
 				$class	= "branchNoExec";
 				$text	= " # ";
-				$title	= "Block containing branch ".
-					  "$br_num was never ".
-					  "executed";
+				$title	= "Branch $br_num was not executed";
 			} elsif ($taken == 0) {
 				$class	= "branchNoCov";
 				$text	= " - ";
