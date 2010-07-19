@@ -3844,7 +3844,7 @@ sub format_count($$)
 	my $result;
 	my $exp;
 
-	$result = sprintf("%*d", $width, $count);
+	$result = sprintf("%*.0f", $width, $count);
 	while (length($result) > $width) {
 		last if ($count < 10);
 		$exp++;
