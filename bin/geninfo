@@ -439,6 +439,11 @@ if (defined($output_filename) && ($output_filename ne "-"))
 foreach my $entry (@data_directory) {
 	gen_info($entry);
 }
+
+if ($initial) {
+	warn("Note: --initial does not generate branch coverage ".
+	     "data\n");
+}
 info("Finished .info-file creation\n");
 
 exit(0);
@@ -595,11 +600,6 @@ sub gen_info($)
 		} else {
 			process_dafile($file, $prefix);
 		}
-	}
-
-	if ($initial) {
-		warn("Note: --initial does not generate branch coverage ".
-		     "data\n");
 	}
 }
 
