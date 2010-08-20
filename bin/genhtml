@@ -871,6 +871,7 @@ sub write_dir_page($$$$$$$$$$$$$$$$$)
 	if (!defined($trunc_dir)) {
 		$trunc_dir = "";
 	}
+	$title .= " - " if ($trunc_dir ne "");
 	write_html_prolog(*HTML_HANDLE, $base_dir, "LCOV - $title$trunc_dir");
 	write_header(*HTML_HANDLE, $view_type, $trunc_dir, $rel_dir,
 		     $overall_found, $overall_hit, $total_fn_found,
