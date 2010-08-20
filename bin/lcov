@@ -2588,7 +2588,7 @@ sub write_info_file(*$)
 #
 # transform_pattern(pattern)
 #
-# Transform shell wildcard expression to equivalent PERL regular expression.
+# Transform shell wildcard expression to equivalent Perl regular expression.
 # Return transformed pattern.
 #
 
