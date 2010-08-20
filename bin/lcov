@@ -801,6 +801,9 @@ sub lcov_geninfo(@)
 	foreach (@opt_ignore_errors) {
 		@param = (@param, "--ignore-errors", $_);
 	}
+	if ($no_recursion) {
+		@param = (@param, "--no-recursion");
+	}
 	if ($initial)
 	{
 		@param = (@param, "--initial");
