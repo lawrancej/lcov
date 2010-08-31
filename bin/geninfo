@@ -1793,6 +1793,7 @@ sub system_no_output($@)
 	($mode & 1) && open(STDOUT, ">/dev/null");
 	($mode & 2) && open(STDERR, ">/dev/null");
  
+	debug("system(".join(' ', @_).")\n");
 	system(@_);
 	$result = $?;
 
