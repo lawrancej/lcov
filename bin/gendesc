@@ -153,13 +153,13 @@ sub gen_desc()
 	local *OUTPUT_HANDLE;
 	my $empty_line = "ignore";
 
-	open(INPUT_HANDLE, $input_filename)
+	open(INPUT_HANDLE, "<", $input_filename)
 		or die("ERROR: cannot open $input_filename!\n");
 
 	# Open output file for writing
 	if ($output_filename)
 	{
-		open(OUTPUT_HANDLE, ">$output_filename")
+		open(OUTPUT_HANDLE, ">", $output_filename)
 			or die("ERROR: cannot create $output_filename!\n");
 	}
 	else
