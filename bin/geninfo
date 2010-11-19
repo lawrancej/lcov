@@ -968,6 +968,9 @@ sub process_dafile($$)
 		my $i;
 		my $num;
 
+		# Skip gcov file for gcc built-in code
+		next if ($gcov_file eq "<built-in>.gcov");
+
 		($source, $object) = read_gcov_header($gcov_file);
 
 		if (defined($source))
