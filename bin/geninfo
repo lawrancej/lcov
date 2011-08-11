@@ -1678,7 +1678,7 @@ sub read_gcov_file($)
 				$branches = br_gvec_push($branches, $last_line,
 						$last_block, $1, '-');
 			}
-			elsif (/^function\s+(\S+)\s+called\s+(\d+)/)
+			elsif (/^function\s+(.+)\s+called\s+(\d+)\s+/)
 			{
 				if ($exclude_line) {
 					next;
