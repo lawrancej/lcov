@@ -3365,7 +3365,7 @@ sub parse_compat_modes($)
 
 	# Parse settings
 	if (defined($opt)) {
-		@opt_list = split(/,/, $opt);
+		@opt_list = split(/\s*,\s*/, $opt);
 	}
 	foreach my $directive (@opt_list) {
 		my ($mode, $value);
